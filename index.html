@@ -15,13 +15,17 @@
   <link rel="stylesheet" href="css/banner.css">
   <link rel="stylesheet" href="css/style.css">
 
-  <title>Taller Mecanico Rayo Makween</title>
+  <title>Home - Taller Mecanico Rayo Makween</title>
+
 </head>
 
 <body>
   <header>
     <nav class="my_navbar navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <a class="navbar-brand pad_l" href="index.html">Inicio</a>
+
+      <a class="navbar-brand pad_l" href="./index.html"> <img src="./img/Llave.png" class="img-fluid" alt="Logo" width="20%">
+      <b class="color_nav">&nbsp Taller Mecanico Rayo Makween</b></a>
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -30,25 +34,23 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="./index.html"><b class="color_nav">Inicio</b><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#"><b class="color_nav">Trabajos Recientes</b></a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
-              Dropdown
+              <b class="color_nav">Trabajos</b>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="#"><b class="color_nav">Categoria</b></a>
+              <a class="dropdown-item" href="#"><b class="color_nav">Mecanico</b></a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+            <a class="nav-link" href="#"><b class="color_nav">Contactanos</b></a>
           </li>
         </ul>
       </div>
@@ -59,12 +61,12 @@
     <div class="banner">
       <div class="sombra">
         <h1>Taller Mecanico Rayo Makween</h1>
-        <p>Todo lo que necesita tu auto en un solo lugar</p>
+        <p>Todo lo que tu auto necesita en un solo lugar</p>
         <hr />
         <div class="cont_banner_link">
-          <a class="banner_link" href="">Enlace 1</a>
-          <a class="banner_link delay_02" href="">Enlace 2</a>
-          <a class="banner_link delay_05" href="">Enlace 3</a>
+          <a class="banner_link" href=""> Trabajos recientes</a>
+          <a class="banner_link delay_02" href=""> Trabajos </a>
+          <a class="banner_link delay_05" href=""> Contactanos</a>
         </div>
       </div>
     </div>
@@ -73,15 +75,16 @@
   <section>
     <div class="container">
       <div class="row cont_sec1">
-        <div class="col-md-9">
-          <h2><b>Taller Mecanico Rayo Makween</b></h2>
-          <p><i>Todo lo que necesita tu auto en un solo lugar</i></p>
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <h2 style="text-align: center;"><b>Taller Mecanico Rayo Makween</b></h2>
           <hr />
-          <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
-        </div>
-        <div class="col-md-3 text-center cont_sec1_link">
-          <a href="#" class="btn btn-secondary btn-md">Lorem Ipsum</a>
-        </div>
+          <p style="text-align: center;"><i>Aqui en Rayo Makween tenemos todo lo que tu auto necesita en un solo lugar.
+                Parte de nuestros servicios incluyen diagnostico vehicular, cambio de aceite,
+                cambio de neumaticos, desmontaje, alineacion, reemplazo de componentes,
+                ensamblaje y mantencion completa.
+          </i></p>
+          <div class="col-md-2"></div>
       </div>
     </div>
   </section>
@@ -113,10 +116,15 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <h2>Titulo de la seccion</h2>
-            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
-            <a class="btn btn-secondary btn-md" href="#">Enlace</a>
+            <h2 style="text-align: center;">Trabajos mas recientes</h2>
+            <h4 style="padding-top: 50%; word-break:keep-all; text-align: center;"> En las imagenes presentadas a continuacion podemos
+               observar parte de los trabajos mas recientes
+               realizados en nuestro taller, si desea saber mas
+               iformacion de alguno de ellos puede hacer click
+               para mas detalles
+            </h4>
           </div>
+          <!-- En este contenedor deveria estar el carrusell-->
           <div class="cont_img col-md-8 text-center">
             <img src="img/mecanico.avif" class="img-fluid" alt="Mecanico">
           </div>
@@ -135,21 +143,22 @@
           <hr />
         </div>
       </div>
+      <!-- Aca tenemos que poner las imagenes de los trabajos-->
       <div class="row text-center">
         <div class="col-md-4">
           <img src="img/mecanico.avif" class="img-fluid cont_img" alt="Mecanico">
-          <h3>Si viva viva</h3>
-          <p>algo mas si viva viva</p>
+          <h3>Trabajo 1</h3>
+          <p>Descripcion trabajo numero 1</p>
         </div>
         <div class="col-md-4">
           <img src="img/mecanico.avif" class="img-fluid cont_img" alt="Mecanico">
-          <h3>Si viva viva</h3>
-          <p>algo mas si viva viva</p>
+          <h3>Trabajo 2</h3>
+          <p>Descripcion trabajo numero 2</p>
         </div>
         <div class="col-md-4">
           <img src="img/mecanico.avif" class="img-fluid cont_img" alt="Mecanico">
-          <h3>Si viva viva</h3>
-          <p>algo mas si viva viva</p>
+          <h3>Trabajo 3</h3>
+          <p>Descripcion trabajo numero 3</p>
         </div>
       </div>
     </div>
@@ -159,33 +168,22 @@
     <div class="cont_footer">
       <div class="container">
         <div class="row">
+          <div class="col-md-1"></div>
           <div class="col-md-3">
-            <h2>Rayo Makween</h2>
-            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
+            <h2 style="text-align: center;">Horario de atención</h2>
+            <p style="text-align: center;">Lunes - Viernes 09:00 a 19:00</p>
+            <p style="text-align: center;">Sabado 10:00 a 13:00</p>
           </div>
-          <div class="col-md-3">
-            <h2>Categorias</h2>
-            <a href="#">Inicio</a>
-            <a href="#">Inicio</a>
-            <a href="#">Inicio</a>
-            <a href="#">Inicio</a>
-          </div>
-          <div class="col-md-3">
-            <h2>Categoria</h2>
-            <a href="#">
-              <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
-              <p>Abril 8</p>
-            </a>
-            <hr />
-            <a href="#">
-              <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
-              <p>Abril 8</p>
-            </a>
-          </div>
+          <div class="col-md-1"></div>
           <div class="col-md-3 cont_img_footer">
-            <img src="img/mecanico.avif" class="img-fluid" alt="Mecanico" width="auto" height="auto">
-            <h3>Ya no se que poner aquí</h3>
-            <p>Taller mecanico</p>
+            <img src="./img/Footer.png" class="img-fluid" alt="Footer" width="auto">
+            <p style="text-align: center;"> All rights reserved ©</p>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-3">
+            <h2 style="text-align: center;">Trabajos</h2>
+            <a style="text-align: center;" href="#">Categoria</a>
+            <a style="text-align: center;" href="#">Mecanico</a>
           </div>
         </div>
       </div>
@@ -207,8 +205,5 @@
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
 </body>
-<footer>
-
-</footer>
 
 </html>

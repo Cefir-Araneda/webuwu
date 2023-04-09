@@ -7,10 +7,11 @@ body{
     font-family: 'Cormorant Garamond', serif;
 }
 .my_navbar {
-    background-color: rgba(255, 255, 255, 0.9) !important;
+    background-color: rgba(190, 4, 4, 0.8) !important;
 }
 .my_navbar div, .my_navbar ul {
-    background-color: transparent !important;
+    background-color: transparent !important; 
+
 }
 .cont_sec1 {
     padding: 10%;
@@ -42,19 +43,26 @@ body{
     padding: 2%;
 }
 
+.color_nav{
+    color: #D6B221;
+}
 .cont_img {
     padding: 8%;
 }
 .cont_footer {
-    background-color: rgba(1, 1, 1, 0.7);
+    background-color: rgba(190, 4, 4, 0.8);
     padding: 10%;
+    padding-bottom: 0;
+    padding-top: 30px;
     color: white;
-    margin-top: 100px;
+    margin-top: 20px;
+
 }
 .cont_footer a {
     color: white;
     text-decoration: none;
     display: block;
+    padding-bottom: 0;
 }
 .cont_img_footer {
     padding: 5%;
