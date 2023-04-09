@@ -13,8 +13,11 @@ body{
     background-color: transparent !important; 
 
 }
+.dropdown a:hover{
+    background-color: rgba(235, 118, 23, 0.8);
+}
 .cont_sec1 {
-    padding: 10%;
+    padding: 5%;
 }
 .cont_sec1_link {
     padding: 5%;
@@ -45,6 +48,10 @@ body{
 
 .color_nav{
     color: #D6B221;
+}
+.color_cont{
+    padding-top: 150px;
+    color: rgba(190, 4, 4);
 }
 .cont_img {
     padding: 8%;

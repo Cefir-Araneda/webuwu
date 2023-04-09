@@ -37,7 +37,7 @@
             <a class="nav-link" href="./index.html"><b class="color_nav">Inicio</b><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><b class="color_nav">Trabajos Recientes</b></a>
+            <a class="nav-link" href="./trabajosrecientes/trabajosrecientes.html"><b class="color_nav">Trabajos Recientes</b></a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -45,12 +45,15 @@
               <b class="color_nav">Trabajos</b>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#"><b class="color_nav">Categoria</b></a>
-              <a class="dropdown-item" href="#"><b class="color_nav">Mecanico</b></a>
+              <a class="dropdown-item" href="./categoria/categoria.html"><b class="color_nav">Categoria</b></a>
+              <a class="dropdown-item" href="./mecanico/mecanico.html"><b class="color_nav">Mecanico</b></a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><b class="color_nav">Contactanos</b></a>
+            <a class="nav-link" href="./contactanos/contactanos.html"><b class="color_nav">Contactanos</b></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./sign/sign.html"><b class="color_nav">Inicio Sesion</b></a>
           </li>
         </ul>
       </div>
@@ -64,9 +67,10 @@
         <p>Todo lo que tu auto necesita en un solo lugar</p>
         <hr />
         <div class="cont_banner_link">
-          <a class="banner_link" href=""> Trabajos recientes</a>
-          <a class="banner_link delay_02" href=""> Trabajos </a>
-          <a class="banner_link delay_05" href=""> Contactanos</a>
+          <a class="banner_link" href="./trabajosrecientes/trabajosrecientes.html"> Trabajos recientes</a>
+          <a class="banner_link delay_02" href="./categoria/categoria.html"> Categorias </a>
+          <a class="banner_link delay_05" href="./mecanico/mecanico.html"> Mecanicos </a>
+          <a class="banner_link delay_07" href="./contactanos/contactanos.html"> Contactanos</a>
         </div>
       </div>
     </div>
@@ -77,14 +81,8 @@
       <div class="row cont_sec1">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-          <h2 style="text-align: center;"><b>Taller Mecanico Rayo Makween</b></h2>
           <hr />
-          <p style="text-align: center;"><i>Aqui en Rayo Makween tenemos todo lo que tu auto necesita en un solo lugar.
-                Parte de nuestros servicios incluyen diagnostico vehicular, cambio de aceite,
-                cambio de neumaticos, desmontaje, alineacion, reemplazo de componentes,
-                ensamblaje y mantencion completa.
-          </i></p>
-          <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
       </div>
     </div>
   </section>
@@ -94,7 +92,10 @@
       <div class="row">
         <div class="col-md-6">
           <h2>Presentacion</h2>
-          <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
+          <p>Aqui en Rayo Makween tenemos todo lo que tu auto necesita en un solo lugar.</br>
+            Parte de nuestros servicios incluyen diagnostico vehicular, cambio de aceite,
+            cambio de neumaticos, desmontaje, alineacion, reemplazo de componentes,
+            ensamblaje y mantencion completa.</p>
           <a target="_blank" href="https://www.google.com/"><i style="color:red" class="icon-ok-squared"></i></a>
           <a target="_blank" href="https://www.google.com/"><i style="color:red" class="icon-eye"></i></a>
           <a target="_blank" href="https://www.google.com/"><i style="color:red" class="icon-comment"></i></a>
@@ -139,26 +140,23 @@
         <div class="col-md-12">
           <hr />
           <h2>Servicios</h2>
-          <p>Si viva viva</p>
-          <hr />
-        </div>
-      </div>
-      <!-- Aca tenemos que poner las imagenes de los trabajos-->
-      <div class="row text-center">
-        <div class="col-md-4">
-          <img src="img/mecanico.avif" class="img-fluid cont_img" alt="Mecanico">
-          <h3>Trabajo 1</h3>
-          <p>Descripcion trabajo numero 1</p>
-        </div>
-        <div class="col-md-4">
-          <img src="img/mecanico.avif" class="img-fluid cont_img" alt="Mecanico">
-          <h3>Trabajo 2</h3>
-          <p>Descripcion trabajo numero 2</p>
-        </div>
-        <div class="col-md-4">
-          <img src="img/mecanico.avif" class="img-fluid cont_img" alt="Mecanico">
-          <h3>Trabajo 3</h3>
-          <p>Descripcion trabajo numero 3</p>
+          <div class="row text-center">
+            <div class="col-md-4">
+              <img src="./img/aceite_indx.jpg" class="img-fluid cont_img" alt="Aceite">
+              <h3>Cambio de aceite</h3>
+              <p>Reemplazo de aceite y filtro para optimo funcionamiento de lubricacion</p>
+            </div>
+            <div class="col-md-4">
+              <img src="./img/diagnostico_indx.jpg" class="img-fluid cont_img" alt="Diagnostico">
+              <h3>Diagnostico</h3>
+              <p>Busqueda de problemas en el vehiculo y presupuesto para arreglarlo</p>
+            </div>
+            <div class="col-md-4">
+              <img src="./img/neumaticos_indx.jpeg" class="img-fluid cont_img" alt="Neumatico">
+              <h3>Cambio de neumaticos</h3>
+              <p>Cambio de uno o mas neumaticos segun requiera el automovil</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -182,8 +180,8 @@
           <div class="col-md-1"></div>
           <div class="col-md-3">
             <h2 style="text-align: center;">Trabajos</h2>
-            <a style="text-align: center;" href="#">Categoria</a>
-            <a style="text-align: center;" href="#">Mecanico</a>
+            <a style="text-align: center;" href="./categoria/categoria.html">Categoria</a>
+            <a style="text-align: center;" href="./mecanico/mecanico.html">Mecanico</a>
           </div>
         </div>
       </div>
