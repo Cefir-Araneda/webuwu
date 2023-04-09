@@ -11,6 +11,7 @@ body{
 }
 .my_navbar div, .my_navbar ul {
     background-color: transparent !important; 
+
 }
 .cont_sec1 {
     padding: 10%;
@@ -55,6 +56,7 @@ body{
     padding-top: 30px;
     color: white;
     margin-top: 20px;
+
 }
 .cont_footer a {
     color: white;
