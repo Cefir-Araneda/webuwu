@@ -11,11 +11,26 @@ body{
 }
 .my_navbar div, .my_navbar ul {
     background-color: transparent !important; 
-
+    text-align: center;
 }
 .dropdown a:hover{
     background-color: rgba(235, 118, 23, 0.8);
 }
+.form-control{
+    align-items: center;
+}
+.btn{
+    text-align: center;
+    padding: 5%;
+    margin-right: 40px;
+    margin-left: 25px;
+    background:#D6B221;
+    color: #AA0A00;
+}
+    .btn:hover{
+        background:#ffcc00;
+        color: #ff1100;
+    }
 .cont_sec1 {
     padding: 5%;
 }
