@@ -61,6 +61,9 @@
 .delay_05 {
     animation-delay: 0.5s;
 }
+.delay_07 {
+    animation-delay: 0.7s;
+}
 .pad_l {
     padding-left: 10px;
 }

@@ -22,22 +22,19 @@
 <body>
   <header>
     <nav class="my_navbar navbar navbar-expand-lg navbar-light bg-light fixed-top">
-
-      <a class="navbar-brand pad_l" href="./index.html"> <img src="./img/Llave.png" class="img-fluid" alt="Logo" width="20%">
+      <a class="navbar-brand pad_l" href="./index.html"> <img  style="max-width: 10%;" src="./img/Llave.png" class="img-fluid" alt="Logo" width="20%">
       <b class="color_nav">&nbsp Taller Mecanico Rayo Makween</b></a>
-
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="./index.html"><b class="color_nav">Inicio</b><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><b class="color_nav">Trabajos Recientes</b></a>
+            <a class="nav-link" href="./trabajosrecientes/trabajosrecientes.html"><b class="color_nav">Trabajos Recientes</b></a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -45,14 +42,34 @@
               <b class="color_nav">Trabajos</b>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#"><b class="color_nav">Categoria</b></a>
-              <a class="dropdown-item" href="#"><b class="color_nav">Mecanico</b></a>
+              <a class="dropdown-item" href="./categoria/categoria.html"><b class="color_nav">Categoria</b></a>
+              <a class="dropdown-item" href="./mecanico/mecanico.html"><b class="color_nav">Mecanico</b></a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><b class="color_nav">Contactanos</b></a>
+            <a class="nav-link" href="./contactanos/contactanos.html"><b class="color_nav">Contactanos</b></a>
           </li>
-        </ul>
+          <li class="nav-item active">
+            <a class="nav-link" href="./sign/sign.html"><b class="color_nav">Inicio Sesion</b></a>
+          </li>
+          <li> 
+              <input class="form-control" type="search" placeholder="Buscar">
+          </li>
+          <li>
+            <a class="btn" href="./index.html">Buscar</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <b class="color_nav"> Bienvenido Mecanico/Usuario!</b>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#"><b class="color_nav">Notificaciones</b></a>
+              <a class="dropdown-item" href="#"><b class="color_nav">Agregar atencion</b></a>
+              <a class="dropdown-item" href="#"><b class="color_nav">Revisar matenciones</b></a>
+            </div>
+          </li>
+        </ul>        
       </div>
     </nav>
   </header>
@@ -64,9 +81,10 @@
         <p>Todo lo que tu auto necesita en un solo lugar</p>
         <hr />
         <div class="cont_banner_link">
-          <a class="banner_link" href=""> Trabajos recientes</a>
-          <a class="banner_link delay_02" href=""> Trabajos </a>
-          <a class="banner_link delay_05" href=""> Contactanos</a>
+          <a class="banner_link" href="./trabajosrecientes/trabajosrecientes.html"> Trabajos recientes</a>
+          <a class="banner_link delay_02" href="./categoria/categoria.html"> Categorias </a>
+          <a class="banner_link delay_05" href="./mecanico/mecanico.html"> Mecanicos </a>
+          <a class="banner_link delay_07" href="./contactanos/contactanos.html"> Contactanos</a>
         </div>
       </div>
     </div>
@@ -77,14 +95,8 @@
       <div class="row cont_sec1">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-          <h2 style="text-align: center;"><b>Taller Mecanico Rayo Makween</b></h2>
           <hr />
-          <p style="text-align: center;"><i>Aqui en Rayo Makween tenemos todo lo que tu auto necesita en un solo lugar.
-                Parte de nuestros servicios incluyen diagnostico vehicular, cambio de aceite,
-                cambio de neumaticos, desmontaje, alineacion, reemplazo de componentes,
-                ensamblaje y mantencion completa.
-          </i></p>
-          <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
       </div>
     </div>
   </section>
@@ -94,7 +106,10 @@
       <div class="row">
         <div class="col-md-6">
           <h2>Presentacion</h2>
-          <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
+          <p>Aqui en Rayo Makween tenemos todo lo que tu auto necesita en un solo lugar.</br>
+            Parte de nuestros servicios incluyen diagnostico vehicular, cambio de aceite,
+            cambio de neumaticos, desmontaje, alineacion, reemplazo de componentes,
+            ensamblaje y mantencion completa.</p>
           <a target="_blank" href="https://www.google.com/"><i style="color:red" class="icon-ok-squared"></i></a>
           <a target="_blank" href="https://www.google.com/"><i style="color:red" class="icon-eye"></i></a>
           <a target="_blank" href="https://www.google.com/"><i style="color:red" class="icon-comment"></i></a>
@@ -102,7 +117,7 @@
           <a target="_blank" href="https://www.google.com/"><i style="color:red" class="icon-flag"></i></a>
         </div>
         <div class="col-md-6">
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/0KFDWqRZJaQ" title="YouTube video player"
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/SbXIj2T-_uk" title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
@@ -112,12 +127,12 @@
   </section>
 
   <section>
-    <div class="cont_banner_sec3">
+    <div style="margin-bottom: 50px" class="cont_banner_sec3">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
             <h2 style="text-align: center;">Trabajos mas recientes</h2>
-            <h4 style="padding-top: 50%; word-break:keep-all; text-align: center;"> En las imagenes presentadas a continuacion podemos
+            <h4 style="padding-top: 25%; word-break:keep-all; text-align: center;"> En las imagenes presentadas a continuacion podemos
                observar parte de los trabajos mas recientes
                realizados en nuestro taller, si desea saber mas
                iformacion de alguno de ellos puede hacer click
@@ -139,26 +154,23 @@
         <div class="col-md-12">
           <hr />
           <h2>Servicios</h2>
-          <p>Si viva viva</p>
-          <hr />
-        </div>
-      </div>
-      <!-- Aca tenemos que poner las imagenes de los trabajos-->
-      <div class="row text-center">
-        <div class="col-md-4">
-          <img src="img/mecanico.avif" class="img-fluid cont_img" alt="Mecanico">
-          <h3>Trabajo 1</h3>
-          <p>Descripcion trabajo numero 1</p>
-        </div>
-        <div class="col-md-4">
-          <img src="img/mecanico.avif" class="img-fluid cont_img" alt="Mecanico">
-          <h3>Trabajo 2</h3>
-          <p>Descripcion trabajo numero 2</p>
-        </div>
-        <div class="col-md-4">
-          <img src="img/mecanico.avif" class="img-fluid cont_img" alt="Mecanico">
-          <h3>Trabajo 3</h3>
-          <p>Descripcion trabajo numero 3</p>
+          <div class="row text-center">
+            <div class="col-md-4">
+              <img src="./img/aceite_indx.jpg" class="img-fluid cont_img" alt="Aceite">
+              <h3>Cambio de aceite</h3>
+              <p>Reemplazo de aceite y filtro para optimo funcionamiento de lubricacion</p>
+            </div>
+            <div class="col-md-4">
+              <img src="./img/diagnostico_indx.jpg" class="img-fluid cont_img" alt="Diagnostico">
+              <h3>Diagnostico</h3>
+              <p>Busqueda de problemas en el vehiculo y presupuesto para arreglarlo</p>
+            </div>
+            <div class="col-md-4">
+              <img src="./img/neumaticos_indx.jpeg" class="img-fluid cont_img" alt="Neumatico">
+              <h3>Cambio de neumaticos</h3>
+              <p>Cambio de uno o mas neumaticos segun requiera el automovil</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -170,20 +182,20 @@
         <div class="row">
           <div class="col-md-1"></div>
           <div class="col-md-3">
-            <h2 style="text-align: center;">Horario de atención</h2>
-            <p style="text-align: center;">Lunes - Viernes 09:00 a 19:00</p>
-            <p style="text-align: center;">Sabado 10:00 a 13:00</p>
+            <h2>Horario de atención</h2>
+            <p>Lunes - Viernes 09:00 a 19:00</p>
+            <p>Sabado 10:00 a 13:00</p>
           </div>
           <div class="col-md-1"></div>
           <div class="col-md-3 cont_img_footer">
             <img src="./img/Footer.png" class="img-fluid" alt="Footer" width="auto">
-            <p style="text-align: center;"> All rights reserved ©</p>
+            <p> All rights reserved ©</p>
           </div>
           <div class="col-md-1"></div>
           <div class="col-md-3">
-            <h2 style="text-align: center;">Trabajos</h2>
-            <a style="text-align: center;" href="#">Categoria</a>
-            <a style="text-align: center;" href="#">Mecanico</a>
+            <h2>Trabajos</h2>
+            <a href="./categoria/categoria.html">Categoria</a>
+            <a href="./mecanico/mecanico.html">Mecanico</a>
           </div>
         </div>
       </div>

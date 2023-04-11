@@ -11,10 +11,28 @@ body{
 }
 .my_navbar div, .my_navbar ul {
     background-color: transparent !important; 
-
+    text-align: center;
 }
+.dropdown a:hover{
+    background-color: rgba(235, 118, 23, 0.8);
+}
+.form-control{
+    align-items: center;
+}
+.btn{
+    text-align: center;
+    padding: 5%;
+    margin-right: 40px;
+    margin-left: 25px;
+    background:#D6B221;
+    color: #AA0A00;
+}
+    .btn:hover{
+        background:#ffcc00;
+        color: #ff1100;
+    }
 .cont_sec1 {
-    padding: 10%;
+    padding: 5%;
 }
 .cont_sec1_link {
     padding: 5%;
@@ -35,16 +53,21 @@ body{
     position: relative;
     padding: 10%;
     margin-top: 200px;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 }
 .cont_banner_sec3 .row {
     background-color: rgba(1, 1, 1, 0.7);
     color: white;
-    padding: 2%;
+    padding-top: 2%;
+    padding-bottom: 0%;
 }
 
 .color_nav{
     color: #D6B221;
+}
+.color_cont{
+    padding-top: 150px;
+    color: rgba(190, 4, 4);
 }
 .cont_img {
     padding: 8%;
@@ -56,6 +79,8 @@ body{
     padding-top: 30px;
     color: white;
     margin-top: 20px;
+    text-align: left;
+    
 
 }
 .cont_footer a {
@@ -63,7 +88,12 @@ body{
     text-decoration: none;
     display: block;
     padding-bottom: 0;
+    text-align: left;
 }
 .cont_img_footer {
     padding: 5%;
+    float: center;
+    max-width: 30%;
+    text-align: left;
 }
+
