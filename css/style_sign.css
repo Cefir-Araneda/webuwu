@@ -90,17 +90,16 @@ form.sign-up-form{
     }
 .btn {
     width: 150px;
-    height: 50px;
     border: none;
     border-radius: 50px;
     background:#D6B221;
     color: #AA0A00;
     font-weight: 600;
     text-align: center;
+    padding-top: 10px;
 }
     .btn:hover{
         width: 150px;
-        height: 50px;
         border: none;
         border-radius: 50px;
         background:#ffcc00;
