@@ -93,35 +93,35 @@
               <a class="btn" style = "margin-left: 0%" href="./WS - Feriados.html">Feriados</a>
             </div>
           </div>
-          <form class="row">
+          <form action="" class="row">
             <div class="form-group col-md-6">
-              <label for="formGroupExampleInput">Mecanico</label>
-              <input type="text" class="form-control" id="formGroupExampleInput name" placeholder="Nombre"
+              <label for="nombre">Mecanico</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Nombre"
                 name="Nombre">
             </div>
             <div class="form-group col-md-6">
-              <label for="formGroupExampleInput">Fecha de atención</label>
+              <label for="date">Fecha de atención</label>
               <input id="date" class="form-control" type="date" placeholder="YYYY-MM-DD" name="fecha">
             </div>
           </form>
         </div>
-        <form>
+        <form action="">
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="formGroupExampleInput">Modelo del vehiculo</label>
-              <input type="text" class="form-control" id="formGroupExampleInput text" placeholder="Modelo"
+              <label for="modelo">Modelo del vehiculo</label>
+              <input type="text" class="form-control" id="modelo" placeholder="Modelo"
                 name="Modelo">
             </div>
             <div class="form-group col-md-6">
-              <label for="formGroupExampleInput">Patente del vehiculo</label>
-              <input type="text" class="form-control" id="formGroupExampleInput text" placeholder="Patente">
+              <label for="patente">Patente del vehiculo</label>
+              <input type="text" class="form-control" id="patente" placeholder="Patente">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <div class="form-group">
-                <label for="exampleFormControlTextarea1">Diagnostico</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1 text" rows="3"></textarea>
+                <label for="diagnostico">Diagnostico</label>
+                <textarea class="form-control" id="diagnostico" rows="3"></textarea>
               </div>
             </div>
             <div class="form-group col-md-6">
@@ -135,8 +135,8 @@
                 <option value="Opcion2">Diagostico y Cambio de neumaticos</option>
                 <option value="Opcion3">Cambio de neumaticos y Cambio de aceite</option>
               </select> <br>
-              <label for="exampleFormControlFile1">Agregar foto del vehiculo</label>
-              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+              <label for="foto">Agregar foto del vehiculo</label>
+              <input type="file" class="form-control-file" id="foto">
             </div>
           </div>
           <div class="form-row">
@@ -152,7 +152,7 @@
             </div>
             <div class="form-group col-md-6">
               <fieldset>
-                <label for="exampleFormControlTextarea1">Mantennciones necesarias</label><br>
+                <label for="exampleFormControlTextarea1">Mantenciones necesarias</label><br>
                 <label>
                   <input type="radio" name="numero" value="1"> Una mantención
                 </label> <br>
@@ -167,19 +167,18 @@
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="formGroupExampleInput">Valor total de la atención</label>
-              <input type="text" class="form-control" id="formGroupExampleInput text" placeholder="$">
+              <label for="valor">Valor total de la atención</label>
+              <input type="text" class="form-control" id="valor" placeholder="$">
             </div>
             <div class="form-group col-md-6">
             </div>
           </div>
-          <div>
+          <div class="row">
             <div class="col-md-6">
-              <button type="submit" class="btn btn-primary"
-                onclick="validarNombre(Nombre.value);validarTexto(Modelo.value);warning(warnings)">Enviar</button>
+              <input class="btn" type="submit" onclick='return enviarFormulario()' value="Enviar">
             </div>
             <div class="col-md-6">
-              <p class="warnings" id="warnings" name="warnings"></p>
+              <p class="error" id="error" name="error"></p>
             </div>
           </div>
         </form>
@@ -217,9 +216,8 @@
     </footer>
 
   <!--JQuery-->
-  <script src="ext/bootstrap/js/jquery.js"></script>
-  <script src="ext/bootstrap/js/bootstrap.min.js"></script>
-  <script src="js/index.js"></script>
+  <script src="../ext/bootstrap/js/jquery.js"></script>
+  <script src="../ext/bootstrap/js/bootstrap.min.js"></script>
   <!--JS de Bootstrap-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -230,5 +228,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+  <!--JS-->
+  <script src='../js/validacion_f2.js'></script>
 </body>
 </html>
