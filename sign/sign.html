@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../css/keyframes.css">
     <link rel="stylesheet" href="../css/banner.css">
     <link rel="stylesheet" href="../css/style_sign.css">
+    <script type="text/javascript" src="../js/sha1.js"></script>
   
   <title>Sign in/Sign up - Taller Mecanico Rayo Makween</title>
 
@@ -22,15 +23,15 @@
 <body>
     <div class="container">
         <div class="signin-signup">
-            <form action="" class="sign-in-form">
+            <form action="../index.html" class="sign-in-form">
                 <h2 class="title">Acceder</h2>
                 <div class="input-field">
-                    <input type="text" placeholder="Usuario">
+                    <input type="text" placeholder="Usuario (Email)" name = "User1" required="">
                 </div>
                 <div class="input-field">
-                    <input type="password" placeholder="Contraseña">
+                    <input type="password" minlength="7" placeholder="Contraseña" name ="Password" id="clave" required="">
                 </div>
-                <a class="btn" href="../index.html"> Acceder</a>
+                <button type="submit" class="btn" onclick="cifrar();validarEmail(User1.value)"> Acceder </button>
                 <p class="social-text"> O accede con tus redes sociales</p>
                 <div class="social-media">
                     <a href="https://es-la.facebook.com/" class="social-icon">
@@ -49,18 +50,18 @@
                 <p class="account-text"> No tienes una cuenta? <a href="#" id="sign-up-btn2"> Registrarse </a></p>
             </form>
 
-            <form action="" class="sign-up-form">
+            <form action="../index.html" class="sign-up-form">
                 <h2 class="title"> Registrarse</h2>
                 <div class="input-field">
-                    <input type="text" placeholder="Usuario">
+                    <input type="text" placeholder="Usuario (Email)" name = "User2" id="user"required="">
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Email" name = "Email" id="mail"required="">
                 </div>
                 <div class="input-field">
-                    <input type="password" placeholder="Contraseña">
+                    <input type="password" minlength="7" placeholder="Contraseña" name ="Password2" id="clave2" required="">
                 </div>
-                <a class="btn" href="../index.html"> Registrarse </a>
+                <button type="submit" class="btn" onclick="cifrar2();validarEmail(User2.value);validarEmail(Email.value);"> Registrarse </button>
                 <p class="social-text"> O registrate con tus redes sociales</p>
                 <div class="social-media">
                     <a href="https://es-la.facebook.com/" class="social-icon">
@@ -82,7 +83,6 @@
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
-
                     <h3> Ya estas registrado?</h3>
                     <p> Haz click en el boton de abajo para acceder a tu cuenta</p>
                     <button class="btn" id="sign-in-btn"> Acceder </button>
@@ -102,9 +102,9 @@
     
   <!--JQuery-->
   <script src="../js/app.js"></script>
+  <script src="../js/validador.js"></script>
   <script src="ext/bootstrap/js/jquery.js"></script>
   <script src="ext/bootstrap/js/bootstrap.min.js"></script>
-  <script src="js/index.js"></script>
   <!--JS de Bootstrap-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
