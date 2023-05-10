@@ -1,41 +1,17 @@
 // Validar mail
-function validaEmail(valor){
-	// Testeamos a ver si es valido
-	if( /^[A-Z]+[@]{1}[A-Z]+[.]{1}[A-Z]{2,3}$/.test(valor) ){
-		alert('Email valido');
-		return true;
-	}else{
-		alert('Email invalido, intente otra vez');
-		return false;	
-	}
+function validarEmail(email) {
+    expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if ( !expr.test(email) )
+        alert("Error: La dirección de correo " + email + " es incorrecta.");
+        return false;
 }
+function cifrar(){
+        var input_pass = document.getElementById("clave");
 
-var Fn = {
-	// Valida el rut con su cadena completa "XXXXXXXX-X"
-	validaRut : function (rutCompleto) {
-		rutCompleto = rutCompleto.replace("‐","-");
-		if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test( rutCompleto ))
-			return false;
-		var tmp 	= rutCompleto.split('-');
-		var digv	= tmp[1]; 
-		var rut 	= tmp[0];
-		if ( digv == 'K' ) digv = 'k' ;
-		
-		return (Fn.dv(rut) == digv );
-	},
-	dv : function(T){
-		var M=0,S=1;
-		for(;T;T=Math.floor(T/10))
-			S=(S+T%10*(9-M++%6))%11;
-		return S?S-1:'k';
-	}
-}
+        input_pass.value = SHA1(input_pass.value);		
+    }
+    function cifrar2(){
+        var input_pass = document.getElementById("clave2");
 
-$("#btnvalida").click(function(){
-	if (Fn.validaRut( $("#txt_rut").val() )){
-		$("#msgerror").html("El rut ingresado es válido :D");
-	} else {
-		$("#msgerror").html("El Rut no es válido :'( ");
-	}
-});
-
+        input_pass.value = SHA1(input_pass.value);		
+    }
