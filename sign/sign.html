@@ -23,15 +23,15 @@
 <body>
     <div class="container">
         <div class="signin-signup">
-            <form name= "test" action="../index.html" class="sign-in-form">
+            <form action="../index.html" class="sign-in-form">
                 <h2 class="title">Acceder</h2>
                 <div class="input-field">
                     <input type="text" placeholder="Usuario (Email)" name = "User1" required="">
                 </div>
                 <div class="input-field">
-                    <input type="password" placeholder="Contraseña" name ="Password" id="clave" required="">
+                    <input type="password" minlength="7" placeholder="Contraseña" name ="Password" id="clave" required="">
                 </div>
-                <button type="submit" class="btn" onclick="validarlargoa(Password.value);validarEmail(User1.value)"> Acceder </button>
+                <button type="submit" class="btn" onclick="cifrar();validarEmail(User1.value)"> Acceder </button>
                 <p class="social-text"> O accede con tus redes sociales</p>
                 <div class="social-media">
                     <a href="https://es-la.facebook.com/" class="social-icon">
@@ -53,15 +53,15 @@
             <form action="../index.html" class="sign-up-form">
                 <h2 class="title"> Registrarse</h2>
                 <div class="input-field">
-                    <input type="text" placeholder="Usuario (Email)" name = "User2" required="">
+                    <input type="text" placeholder="Usuario (Email)" name = "User2" id="user"required="">
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Email" name = "Email" required="">
+                    <input type="text" placeholder="Email" name = "Email" id="mail"required="">
                 </div>
                 <div class="input-field">
-                    <input type="password" placeholder="Contraseña" name ="Password2" id="clave2" required="">
+                    <input type="password" minlength="7" placeholder="Contraseña" name ="Password2" id="clave2" required="">
                 </div>
-                <button type="submit" class="btn" onclick="validarlargor(Password2.value);validarEmail(User2.value);validarEmail(Email.value)"> Registrarse </button>
+                <button type="submit" class="btn" onclick="cifrar2();validarEmail(User2.value);validarEmail(Email.value);"> Registrarse </button>
                 <p class="social-text"> O registrate con tus redes sociales</p>
                 <div class="social-media">
                     <a href="https://es-la.facebook.com/" class="social-icon">
