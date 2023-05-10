@@ -5,6 +5,7 @@ function validarEmail(email) {
         alert("Error: La dirección de correo " + email + " es incorrecta.");
         return false;
 }
+// Cifrado SHA
 function cifrar(){
         var input_pass = document.getElementById("clave");
 
