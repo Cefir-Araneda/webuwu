@@ -31,7 +31,7 @@
                 <div class="input-field">
                     <input type="password" minlength="7" placeholder="Contraseña" name ="Password" id="clave" required="">
                 </div>
-                <button type="submit" class="btn" onclick="cifrar();validarEmail(User1.value)"> Acceder </button>
+                <button type="submit" class="btn" onclick="validarPass(Password.value);validarEmail(User1.value)"> Acceder </button>
                 <p class="social-text"> O accede con tus redes sociales</p>
                 <div class="social-media">
                     <a href="https://es-la.facebook.com/" class="social-icon">
@@ -61,7 +61,7 @@
                 <div class="input-field">
                     <input type="password" minlength="7" placeholder="Contraseña" name ="Password2" id="clave2" required="">
                 </div>
-                <button type="submit" class="btn" onclick="cifrar2();validarEmail(User2.value);validarEmail(Email.value);"> Registrarse </button>
+                <button type="submit" class="btn" onclick="cifrar2();return validarEmail(User2.value); return validarEmail(Email.value);"> Registrarse </button>
                 <p class="social-text"> O registrate con tus redes sociales</p>
                 <div class="social-media">
                     <a href="https://es-la.facebook.com/" class="social-icon">
@@ -103,8 +103,8 @@
   <!--JQuery-->
   <script src="../js/app.js"></script>
   <script src="../js/validador.js"></script>
-  <script src="ext/bootstrap/js/jquery.js"></script>
-  <script src="ext/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../ext/bootstrap/js/jquery.js"></script>
+  <script src="../ext/bootstrap/js/bootstrap.min.js"></script>
   <!--JS de Bootstrap-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
