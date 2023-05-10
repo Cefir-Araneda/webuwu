@@ -7,9 +7,12 @@ var flag2 = true;
 function validarEmail(email) {
     console.log('Enviando formulario...');
     expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    if ( !expr.test(email) )
+    if ( !expr.test(email) ) {
         alert("Error: La dirección de correo " + email + " es incorrecta.");
         return false;
+    } else {
+        return true;
+    }
 }
 function validarPass(clave) {
     if(clave.value === null || clave.value === '' || clave.value.length < 7) {
