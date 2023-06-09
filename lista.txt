@@ -1,0 +1,14 @@
+Formularios
+Inicio de sesión (Para clientes y Administradores)
+Crear cuenta (Para clientes)
+Agregar atención (Administradores)
+Contacto (clientes)
+
+Tablas
+Mecanico
+Genero
+Usuario (Para clientes y Administradores)
+Atencion
+
+Relaciones
+Atenciones <> Mecanico
