@@ -14,7 +14,8 @@
                 <h2>Formulario Actualizar Datos</h2><br>
                 <form action="{% url 'atencionesUpdate' %}" method="POST">
                     {% csrf_token %}
-
+                    
+                    <pre> Id atencion: <input type="number" name="id_ate" value="{{atenciones.id_atencion}}"></pre>
                     <pre>Mecanico:      <select name="mecanico">
                         {% for mecanico in mecanicos %}
                             {% if mecanico.rut == atenciones.mecanico.rut %}

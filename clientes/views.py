@@ -77,6 +77,8 @@ def atenciones_editFind(request,pk):
 
 def atencionesUpdate(request):
     if request.method == "POST":
+
+        id_ate=request.POST["id_ate"]
         mecanico=request.POST["mecanico"]
         fechaAte=request.POST["fechaAte"]
         modelo=request.POST["modelo"]
@@ -90,6 +92,7 @@ def atencionesUpdate(request):
         objMantencion=Mantencion.objects.get(id_mantencion = mantencion)
 
         atencion = Atencion()
+        atencion.id_atencion=id_ate
         atencion.mecanico=objMecanico
         atencion.fecha_atencion=fechaAte
         atencion.modelo=modelo
