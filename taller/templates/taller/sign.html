@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--CSS de Bootstrap-->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'img/iconos/css/fontello.css' %}">
+    <link rel="stylesheet" href="{% static 'ext/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/keyframes.css' %}">
+    <link rel="stylesheet" href="{% static 'css/banner.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_sign.css' %}">
+    <script type="text/javascript" src="{% static 'js/sha1.js' %}"></script>
+  
+  <title>Sign in/Sign up - Taller Mecanico Rayo Makween</title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="signin-signup">
+            <form action="index" class="sign-in-form">
+                <h2 class="title">Acceder</h2>
+                <div class="input-field">
+                    <input type="text" placeholder="Usuario (Email)" name = "User1" required="">
+                </div>
+                <div class="input-field">
+                    <input type="password" minlength="7" placeholder="Contraseña" name ="Password" id="clave" required="">
+                </div>
+                <button type="submit" class="btn" onclick="cifrar();validarEmail(User1.value)"> Acceder </button>
+                <p class="social-text"> O accede con tus redes sociales</p>
+                <div class="social-media">
+                    <a href="https://es-la.facebook.com/" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://accounts.google.com/AccountChooser/identifier?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="https://cl.linkedin.com/" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <p class="account-text"> No tienes una cuenta? <a href="#" id="sign-up-btn2"> Registrarse </a></p>
+            </form>
+
+            <form action="index" class="sign-up-form">
+                <h2 class="title"> Registrarse</h2>
+                <div class="input-field">
+                    <input type="text" placeholder="Usuario (Email)" name = "User2" id="user"required="">
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Email" name = "Email" id="mail"required="">
+                </div>
+                <div class="input-field">
+                    <input type="password" minlength="7" placeholder="Contraseña" name ="Password2" id="clave2" required="">
+                </div>
+                <button type="submit" class="btn" onclick="cifrar2();validarEmail(User2.value);validarEmail(Email.value);"> Registrarse </button>
+                <p class="social-text"> O registrate con tus redes sociales</p>
+                <div class="social-media">
+                    <a href="https://es-la.facebook.com/" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://accounts.google.com/AccountChooser/identifier?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="https://cl.linkedin.com/" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <p class="account-text"> Ya tienes una cuenta? <a href="#" id="sign-in-btn2"> Acceder </a></p>
+            </form>
+        </div>
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3> Ya estas registrado?</h3>
+                    <p> Haz click en el boton de abajo para acceder a tu cuenta</p>
+                    <button class="btn" id="sign-in-btn"> Acceder </button>
+                </div>
+                <img src="{% static 'img/signin.svg' %}" alt="Figura de acceso" class="image">
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3> Nuevo en el taller?</h3>
+                    <p> Haz click en el boton de abajo e ingresa tus datos!</p>
+                    <button class="btn" id="sign-up-btn"> Registarse </button>
+                </div>
+                <img src="{% static 'img/signup.svg' %}" alt="Figura de registro" class="image">
+            </div>
+        </div>
+    </div>
+    
+  <!--JQuery-->
+  <script src="{% static 'js/app.js' %}"></script>
+  <script src="{% static 'js/validador.js' %}"></script>
+  <script src="{% static 'ext/bootstrap/js/jquery.js' %}"></script>
+  <script src="{% static 'ext/bootstrap/js/bootstrap.min.js' %}"></script>
+  <!--JS de Bootstrap-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
