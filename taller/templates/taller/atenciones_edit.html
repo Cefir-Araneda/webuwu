@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Editar Atencion</title>
+    </head>
+    <body>
+
+        <div style=" text-align: left;">
+            {% if atenciones %}
+                <h2>Formulario Actualizar Datos</h2><br>
+                <form action="{% url 'atencionesUpdate' %}" method="POST">
+                    {% csrf_token %}
+                    
+                    <pre> Id atencion: <input type="number" name="id_ate" value="{{atenciones.id_atencion}}"></pre>
+                    <pre>Mecanico:      <select name="mecanico">
+                        {% for mecanico in mecanicos %}
+                            {% if mecanico.rut == atenciones.mecanico.rut %}
+                                <option value="{{mecanico.rut}}" selected>{{mecanico.nombre}}</option>
+                            {% else %}
+                                <option value="{{mecanico.rut}}">{{mecanico.nombre}}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select></pre>
+                    <pre>Fecha Ate.:    <input type="date" name="fechaAte" value="{{atenciones.fecha_atencion|date:'Y-m-d'}}"></pre>
+                    <pre>Modelo:        <input type="text" name="modelo" value="{{atenciones.modelo}}"></pre>
+                    <pre>Patente:       <input type="text" name="patente" value="{{atenciones.patente}}"></pre>
+                    <pre>Diagnostico:   <input type="text" name="diagnostico" value="{{atenciones.diagnostico}}"></pre>
+                    <pre>Mantencion:    <select name="mantencion">
+                        {% for mantencion in mantenciones %}
+                            {% if mantencion.id_mantencion == atenciones.mantencion.id_mantencion %}
+                                <option value="{{mantencion.id_mantencion}}" selected>{{mantencion.mantencion}}</option>
+                            {% else %}
+                                <option value="{{mantencion.id_mantencion}}">{{mantencion.mantencion}}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select></pre>
+                    <pre>Cantidad:      <input type="text" name="cantidad" value="{{atenciones.cantidad}}"></pre>
+                    <pre>Valor:         <input type="text" name="valor" value="{{atenciones.valor}}"></pre>
+
+                    <input type="submit" name="opcion" value="Actualizar">
+
+                </form><br><br>
+            {% endif %}
+            <div id="idMensajes">
+                {% if mensaje %}
+                {{mensaje}}
+                {% endif %}
+            </div>
+            <br><br>
+            <a href="{% url 'crud' %}"> Volver</a>
+        </div>
+    </body>
+</html>
