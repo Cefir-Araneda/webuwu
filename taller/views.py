@@ -1,6 +1,27 @@
 from django.shortcuts import render
-
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 # Create your views here.
+
+#def sign_in(request):
+
+    #if request.method == 'GET':
+     #   context={}
+      #  return render(request, 'taller/signin.html', context)
+    #else:
+     #   if request.POST['password1'] == request.POST['password2']:
+      #      User.objects.create_user(username = request.POST['username'])
+       #     return HttpResponse('Las contraseñas no coinciden')
+
+
+#def sign_up(request):
+    #if request.method == 'GET':
+     #   context={}
+     #   return render(request, 'taller/signup.html', context)
+    #else:
+     #   if request.POST['password1'] == request.POST['password2']:
+      #      User.objects.create_user(username = request.POST['username'])
+       #     return HttpResponse('Las contraseñas no coinciden')
 
 def index(request):
     context={}

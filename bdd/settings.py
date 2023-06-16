@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'taller',
+    'mecanico',
+    'cliente'
 ]
 
 MIDDLEWARE = [
@@ -55,7 +57,7 @@ ROOT_URLCONF = 'bdd.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "templates",],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -67,6 +69,8 @@ TEMPLATES = [
         },
     },
 ]
+LOGIN_REDIRECT_URL ="signin"
+
 
 WSGI_APPLICATION = 'bdd.wsgi.application'
 

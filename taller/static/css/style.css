@@ -22,8 +22,8 @@ body{
 .btn{
     padding-top: 5px;
     text-align: center;
-    margin-right: 40px;
-    margin-left: 25px;
+    margin-right: 10px;
+    margin-left: 10px;
     background:#D6B221;
     color: #AA0A00;
 }
@@ -31,6 +31,7 @@ body{
         background:#ffcc00;
         color: #ff1100;
     }
+
 .cont_sec1 {
     padding: 5%;
 }

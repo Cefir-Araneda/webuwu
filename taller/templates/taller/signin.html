@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS de Bootstrap-->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'img/iconos/css/fontello.css' %}">
+    <link rel="stylesheet" href="{% static 'ext/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/keyframes.css' %}">
+    <link rel="stylesheet" href="{% static 'css/banner.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sign-in.css' %}">
+    <title> Sign-In - Taller Mecanico Rayo Makween </title>
+</head>
+<body>
+    <section>
+        <div class="form-box">
+            <div>
+                <form action="" id="SignUp">
+                    <h2> Acceder </h2>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" required>
+                        <label for=""> Email </label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" required>
+                        <label for=""> Contraseña </label>
+                    </div>
+
+                    <div class="forget">
+                        <a href="#"> ¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <button> Acceder </button>
+                    <div class="sign-up">
+                        <p> ¿No tienes una cuenta? <a href="signup"> Registrate </a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
