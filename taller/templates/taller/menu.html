@@ -1,0 +1,7 @@
+<h1>Aqui despliego página principal del proyecto</h1>
+{% if user.is_authenticated %}
+	Usuario:{{usuario}}
+{% else %}
+	<br><a href="http://127.0.0.1:8000/accounts/login">Login</a>
+{% endif %}
+	<br><br><a href="{% url 'home' %}">Cerrar Sesion</a>

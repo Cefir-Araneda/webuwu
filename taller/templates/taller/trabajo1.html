@@ -23,22 +23,19 @@
 <body>
   <header>
     <nav class="my_navbar navbar navbar-expand-lg navbar-light bg-light fixed-top">
-
-      <a class="navbar-brand pad_l" href="home"> <img style="max-width: 10%;" src="{% static 'img/Llave.png' %}" class="img-fluid" alt="Logo" width="20%">
+      <a class="navbar-brand pad_l" href="index"> <img  style="max-width: 10%;" src="{% static 'img/Llave.png' %}" class="img-fluid" alt="Logo" width="20%">
       <b class="color_nav">&nbsp Taller Mecanico Rayo Makween</b></a>
-
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="home"><b class="color_nav">Inicio</b></a>
+            <a class="nav-link" href="index"><b class="color_nav">Inicio</b><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="trabajosrecientes"><b class="color_nav">Trabajos Recientes</b><span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="trabajosrecientes"><b class="color_nav">Trabajos Recientes</b></a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -53,27 +50,26 @@
           <li class="nav-item">
             <a class="nav-link" href="contactanos"><b class="color_nav">Contactanos</b></a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="sign"><b class="color_nav">Inicio Sesion</b></a>
-          </li>
           <li> 
-            <input class="form-control" type="search" placeholder="Buscar">
-        </li>
-        <li>
-          <a class="btn" href="home">Buscar</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <b class="color_nav"> Bienvenido Mecanico/Usuario!</b>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="notificaciones"><b class="color_nav">Notificaciones</b></a>
-            <a class="dropdown-item" href="atenciones_add"><b class="color_nav">Agregar atencion</b></a>
-            <a class="dropdown-item" href="mantenciones"><b class="color_nav">Revisar matenciones</b></a>
-          </div>
-        </li>
-        </ul>
+              <input class="form-control" type="search" placeholder="Buscar">
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <b class="color_nav">{% if user.is_authenticated %}
+                                    Bienvenido: {{user.username}}!
+                                    {% else %}
+                                    <a href="http://127.0.0.1:8000/accounts/login"><b>Acceder</b></a>
+                                   {% endif %}
+              </b>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="perfil"><b class="color_nav">Perfil</b></a>
+              <a class="dropdown-item" href="atencionesAdd"><b class="color_nav">Agregar mantencion</b></a>
+              <a class="dropdown-item" href="{% url 'home' %}"><b class="color_nav">Cerrar Sesion</b></a>
+            </div>
+          </li>
+        </ul>        
       </div>
     </nav>
   </header>
