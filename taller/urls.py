@@ -4,17 +4,18 @@ from . import views
 
 urlpatterns = [
     path('home', views.home, name='home'),
+    path('index', views.index, name='index'),
     path('trabajosrecientes', views.trabajosrecientes, name = 'trabajosrecientes'),
     path('categoria', views.categoria, name = 'categoria'),
     path('mecanico', views.mecanico, name = 'mecanico'),
     path('contactanos', views.contactanos, name = 'contactanos'),
-    path('signin', views.signin, name = 'signin'),
-    path('signup', views.signup, name = 'signup'),
+    path('register', views.register, name = 'register'),
 
     path('trabajo1', views.trabajo1, name = 'trabajo1'),
     path('trabajo2', views.trabajo2, name = 'trabajo2'),
     path('trabajo3', views.trabajo3, name = 'trabajo3'),
     
+    path('perfil', views.perfil, name = 'perfil'),
     path('mantenciones', views.mantenciones, name = 'mantenciones'),
     path('notificaciones', views.notificaciones, name = 'notificaciones'),
     
@@ -23,4 +24,5 @@ urlpatterns = [
     path('atenciones_del/<str:pk>', views.atenciones_del, name='atenciones_del'),
     path('atenciones_editFind/<str:pk>', views.atenciones_editFind, name='atenciones_editFind'),
     path('atencionesUpdate', views.atencionesUpdate, name='atencionesUpdate'),
+    path('menu',views.menu,name='menu'),
 ]

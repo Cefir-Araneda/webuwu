@@ -1,46 +1,50 @@
 from django.shortcuts import render
 from .models import Mecanico, Genero, Mantencion, Atencion
+from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 # Create your views here.
 
-#def sign_in(request):
+def register(request):
+    if request.method != "POST":
+        Users= User.objects.all()
+        context={'Users':Users}
+        return render(request, 'taller/signup.html', context)
+    else:
+        newuser=request.POST["newuser"]
+        pass1=request.POST["password1"]
+        pass2=request.POST["password2"]
 
-    #if request.method == 'GET':
-     #   context={}
-      #  return render(request, 'taller/signin.html', context)
-    #else:
-     #   if request.POST['password1'] == request.POST['password2']:
-      #      User.objects.create_user(username = request.POST['username'])
-       #     return HttpResponse('Las contraseñas no coinciden')
+        if pass1 == pass2:
+            obj=User.objects.create_user(username=newuser,
+                                         password=pass1)
+            obj.save()
+            Users= User.objects.all()
+            context={'Users':Users}
+            return render(request, 'taller/home.html', context)  
+    print("Las contraseñas ingresadas son distintas")
+    return render(request, 'taller/signup.html')
 
-
-#def sign_up(request):
-    #if request.method == 'GET':
-     #   context={}
-     #   return render(request, 'taller/signup.html', context)
-    #else:
-     #   if request.POST['password1'] == request.POST['password2']:
-      #      User.objects.create_user(username = request.POST['username'])
-       #     return HttpResponse('Las contraseñas no coinciden')
-
-
+@login_required
+def menu(request):
+    context={}
+    if request.user.is_authenticated:
+        request.session["username"]=request.user.username
+        usuario=request.session["username"]
+        context={'usuario':usuario}
+    return render(request,'taller/menu.html',context)
 
 def home(request):
     context={}
     return render(request, 'taller/home.html', context)
 
-def signin(request):
+def perfil(request):
     context={}
-    return render(request, 'taller/signin.html', context)
-
-def signup(request):
-    context={}
-    return render(request, 'taller/signup.html', context)
+    return render(request, 'taller/perfil.html', context)
 
 def trabajosrecientes(request):
     context={}
-    return render(request, 'taller/trabajosrecientes.html', context)
+    return render(request, 'taller/perfil.html', context)
 
 def categoria(request):
     context={}
@@ -54,9 +58,6 @@ def contactanos(request):
     context={}
     return render(request, 'taller/contactanos.html', context)
 
-def sign(request):
-    context={}
-    return render(request, 'taller/sign.html', context)
 
 def trabajo1(request):
     context={}
@@ -90,6 +91,7 @@ def crud(request):
     context= {'atenciones': atenciones}
     return render(request, 'taller/atenciones_list.html', context) 
 
+@login_required
 def atencionesAdd(request):
     if request.method != "POST":
         mecanicos= Mecanico.objects.all()
@@ -122,7 +124,7 @@ def atencionesAdd(request):
         context={'mecanicos':mecanicos,'mantenciones':mantenciones,'mensaje':"Ok, Atencion registrada..."}
         return render(request, 'taller/atenciones_add.html', context)
 
-
+@login_required
 def atenciones_del(request,pk):
     context={}
     try:
@@ -138,7 +140,8 @@ def atenciones_del(request,pk):
         atenciones= Atencion.objects.all()
         context= {'atenciones': atenciones, 'mensaje': mensaje}
         return render(request, 'taller/atenciones_list.html', context)
-
+    
+@login_required
 def atenciones_editFind(request,pk):
     if pk != "":
         atenciones= Atencion.objects.get(id_atencion=pk)
@@ -152,6 +155,7 @@ def atenciones_editFind(request,pk):
             context= {'mensaje': "Error, atencion no existe..."}
             return render(request, 'taller/atenciones_list.html', context)
 
+@login_required
 def atencionesUpdate(request):
     if request.method == "POST":
 

@@ -67,8 +67,8 @@ TEMPLATES = [
         },
     },
 ]
-LOGIN_REDIRECT_URL ="signin"
-
+LOGIN_REDIRECT_URL ="index"
+LOGOUT_REDIRECT_URL="home"
 
 WSGI_APPLICATION = 'bdd.wsgi.application'
 
