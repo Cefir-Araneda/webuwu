@@ -46,7 +46,7 @@ def perfil(request):
 
 def trabajosrecientes(request):
     context={}
-    return render(request, 'taller/perfil.html', context)
+    return render(request, 'taller/trabajosrecientes.html', context)
 
 def categoria(request):
     context={}
