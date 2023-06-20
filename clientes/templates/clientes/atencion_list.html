@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atenciones</title>
+    </head>
+    <body>
+        <h1>Lista de Atenciones</h1>
+        <br>
+        <button type="button">
+            <a href="{% url 'atencionAdd' %}">Agregar</a>
+        </button>
+        
+        <div id="idMensajes">
+            {% if mensaje %}
+                {{mensaje}}
+            {% endif %}
+        </div>
+
+        <table>
+            {% if atenciones %}
+                <th>Mecanico</th>
+                <th>Fecha</th>
+                <th>Modelo</th>
+                <th>Patente</th>
+                <th>Diagnostico</th>
+                <th>Eliminar</th>
+                <th>Modificar</th>
+                {% for x in atenciones %}
+                    <tr>
+                        <td>{{ x.mecanico.nombre }}</td>
+                        <td>{{ x.fecha_atencion }}</td>
+                        <td>{{ x.modelo }}</td>
+                        <td>{{ x.patente }}</td>
+                        <td>{{ x.diagnostico }}</td>
+                        <td><a href="{% url 'atenciones_del' pk=x.id_atencion %}">Eliminar</a></td>
+                        <td><a href="{% url 'atenciones_editFind' pk=x.id_atencion %}">Modificar</a></td>
+                    </tr>
+                {% endfor %}
+            {% endif %}
+        </table>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#idMensajes").delay(2000).fadeOut("slow");
+        });
+    </script>
+    </body>
+</html>

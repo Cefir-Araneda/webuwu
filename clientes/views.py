@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Mecanico, Genero, Mantencion, Atencion
+from .forms import GeneroForm, AtencionForm
 
 # Create your views here.
 
@@ -112,3 +113,49 @@ def atencionesUpdate(request):
         context={'atenciones':atenciones}
         return render(request, 'clientes/atencion_list.html',context)
     
+def crud_generos(request):
+    generos = Genero.objects.all()
+    context ={'generos':generos}
+    print('enviando datos generos_list')
+    return render(request,"clientes/generos_list.html",context)
+
+def crud_atencion(request):
+    atenciones= Atencion.objects.all()
+    context= {'atenciones': atenciones}
+    return render(request, 'clientes/atencion_list.html', context) 
+
+def generosAdd(request):
+    print("Estoy en generosAdd")
+    context= {}
+
+    if request.method == "POST":
+        print("Es un post")
+        form = GeneroForm(request.POST)
+        if form.is_valid:
+            print("Estoy en agregar")
+            form.save()
+            form=GeneroForm()
+            context={'mensaje':"Ok, datos guardados",'form':form}
+            return render(request,'clientes/generos_add.html', context)
+    else:
+        form = GeneroForm()
+        context={'form':form}
+        return render(request,'clientes/generos_add.html', context)
+
+def atencionAdd(request):
+    print("Estoy en atencionAdd")
+    context= {}
+
+    if request.method == "POST":
+        print("Es un post")
+        form = AtencionForm(request.POST)
+        if form.is_valid:
+            print("Estoy en agregar")
+            form.save()
+            form=AtencionForm()
+            context={'mensaje':"Ok, datos guardados",'form':form}
+            return render(request,'clientes/atencion_add.html', context)
+    else:
+        form = AtencionForm()
+        context={'form':form}
+        return render(request,'clientes/atencion_add.html', context)
