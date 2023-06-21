@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from .models import Mecanico, Genero, Mantencion, Atencion
 from django.contrib.auth.models import User
+from .forms import GeneroForm, AtencionForm
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse
 # Create your views here.
 
 def register(request):
@@ -26,15 +26,6 @@ def register(request):
             return render(request, 'taller/home.html', context)        
     print("Las contraseñas ingresadas son distintas")
     return render(request, 'taller/signup.html')
-
-@login_required
-def menu(request):
-    context={}
-    if request.user.is_authenticated:
-        request.session["username"]=request.user.username
-        usuario=request.session["username"]
-        context={'usuario':usuario}
-    return render(request,'taller/menu.html',context)
 
 def home(request):
     context={}
@@ -60,6 +51,9 @@ def contactanos(request):
     context={}
     return render(request, 'taller/contactanos.html', context)
 
+def galeria(request):
+    context={}
+    return render(request, 'taller/galeria.html', context)
 
 def trabajo1(request):
     context={}
