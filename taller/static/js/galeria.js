@@ -3,7 +3,7 @@ function obtenerImagenesDeAutos() {
     const apiKey = '8J8PWxWDsdWpMcAcwoJNWSoDet6wxBd2f2pSB900reX1rxebauog3NjK';
   
     // Realiza una solicitud de búsqueda a la API de Pexels
-    fetch('https://api.pexels.com/v1/search?query=Ferrari', {
+    fetch('https://api.pexels.com/v1/search?query=car', {
       headers: {
         Authorization: apiKey,
       },
