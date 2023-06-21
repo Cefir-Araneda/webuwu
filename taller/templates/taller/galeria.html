@@ -15,8 +15,9 @@
   <link rel="stylesheet" href="{% static 'css/keyframes.css' %}">
   <link rel="stylesheet" href="{% static 'css/banner.css' %}">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script src="{% static 'js/galeria.js' %}"></script>
 
-  <title>Trabajos Recientes - Taller Mecanico Rayo Makween</title>
+  <title>Home - Taller Mecanico Rayo Makween</title>
 
 </head>
 
@@ -69,7 +70,9 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="perfil"><b class="color_nav">Perfil</b></a>
+              <a class="dropdown-item" href="notificaciones"><b class="color_nav">Notificaciones</b></a>
               <a class="dropdown-item" href="atencionesAdd"><b class="color_nav">Agregar mantencion</b></a>
+              <a class="dropdown-item" href="mantenciones"><b class="color_nav">Mantenciones</b></a>
               <a class="dropdown-item" href="{% url 'home' %}"><b class="color_nav">Cerrar Sesion</b></a>
             </div>
           </li>
@@ -78,57 +81,22 @@
     </nav>
   </header>
 
-  <!--Seccion 1-->
+  <br><br>
+  <br><br>
+
   <section>
-    <div class="cont_banner_sec3">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <h2 style="text-align: center;">Lamborghini Huracan STO</h2>
-            <h4 style="padding-top: 25%; word-break:keep-all; text-align: left;"> 
-                <ul>
-                    <li>Diagnostico: Falla en las bujias</li>
-                    <li>Mecanico: Christian Abellan</li>
-                    <li>Fecha: 21/3/2023</li>
-                    <li>Materiales: Bujias nuevas y kit de herramientas.</li>
-                </ul>          
-            </h4>
-            
-          </div>
-          <!--imagen-->
-          <div class="col-md-8">
-            <img class="d-block w-100" src="{% static 'img/autos/Lamborghini_Huracan_STO.png' %}" width="100%" height="450px" alt="First slide">
-          </div>
+        <div class="container">
+            <h1>Galería de imágenes de autos</h1>
+            <div id="gallery" class="style">
+                <script>
+                    // Llama a la función para obtener las imágenes de autos al cargar la página
+                    window.addEventListener('load', obtenerImagenesDeAutos());
+                </script>   
+            </div> 
         </div>
-      </div>
-    </div>
   </section>
-  
-  <!--Seccion 2-->
-  <section>
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-md-12">
-          <hr />
-          <h2>Galeria</h2>
-          <div class="row text-center">
-            <div class="col-md-4">
-              <img src="{% static 'img/autos/Lamborghini_Huracan_STO_interior.png' %}" class="img-fluid cont_img" alt="interior">
-              <h3>Interior del vehiculo</h3>
-            </div>
-            <div class="col-md-4">
-              <img src="{% static 'img/autos/Lamborghini_Huracan_STO_interior2.png' %}" class="img-fluid cont_img" alt="interior">
-              <h3>Interior del vehiculo</h3>
-            </div>
-            <div class="col-md-4">
-              <img src="{% static 'img/autos/Lamborghini_Huracan_STO_motor.png' %}" class="img-fluid cont_img" alt="motor">
-              <h3>Motor del vehiculo</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <br><br>
+  <br><br>
 
   <footer>
     <div class="cont_footer">

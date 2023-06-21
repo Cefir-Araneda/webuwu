@@ -8,6 +8,7 @@ urlpatterns = [
     path('trabajosrecientes', views.trabajosrecientes, name = 'trabajosrecientes'),
     path('categoria', views.categoria, name = 'categoria'),
     path('mecanico', views.mecanico, name = 'mecanico'),
+    path('galeria', views.galeria, name='galeria'),
     path('contactanos', views.contactanos, name = 'contactanos'),
     path('register', views.register, name = 'register'),
 
@@ -24,5 +25,4 @@ urlpatterns = [
     path('atenciones_del/<str:pk>', views.atenciones_del, name='atenciones_del'),
     path('atenciones_editFind/<str:pk>', views.atenciones_editFind, name='atenciones_editFind'),
     path('atencionesUpdate', views.atencionesUpdate, name='atencionesUpdate'),
-    path('menu',views.menu,name='menu'),
 ]
