@@ -11,6 +11,7 @@ def register(request):
         context={'Users':Users}
         return render(request, 'taller/signup.html', context)
     else:
+        fname=request.POST["name"]
         newuser=request.POST["newuser"]
         pass1=request.POST["password1"]
         pass2=request.POST["password2"]
@@ -19,7 +20,8 @@ def register(request):
         if pass1 == pass2:
             obj=User.objects.create_user(username=newuser,
                                          password=pass1,
-                                         email=mail)
+                                         email=mail,
+                                         first_name=fname)
             obj.save()
             Users= User.objects.all()
             context={'Users':Users}
