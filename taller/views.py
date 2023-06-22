@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from .models import Mecanico, Genero, Mantencion, Atencion
+from .models import Mecanico, Mantencion, Atencion
 from django.contrib.auth.models import User
-from .forms import GeneroForm, AtencionForm
+from .forms import AtencionForm
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
@@ -190,3 +190,73 @@ def atencionesUpdate(request):
         atenciones = Atencion.objects.all()
         context={'atenciones':atenciones}
         return render(request, 'taller/atencion_list.html',context)
+    
+# Forms
+def crud_atencion(request):
+    atenciones=Atencion.objects.all()
+    context={'atenciones':atenciones}
+    print("Enviando datos a atencion_list")
+    return render(request,"taller/atencion_list.html",context)
+
+def atencionAdd(request):
+    print("Estoy en controlador AtencionAdd")
+    context={}
+
+    if request.method == "POST":
+        print("contrtolador es post")
+        form= AtencionForm(request.POST)
+        if form.is_valid:
+            print("Estoy agregando, es valido")
+            form.save()
+            form=AtencionForm()
+            context={'mensaje':'Ok, datos guardados...','form':form}
+            return render(request,'taller/atencion_add.html',context)
+    else:
+        form=AtencionForm()
+        context={'form':form}
+        return render(request,'taller/atencion_add.html',context)
+    
+def atencionDel(request,pk):
+    errores=[]
+    atenciones=Atencion.objects.all()
+    try:
+        atencion=Atencion.objects.get(id_atencion=pk)
+        context={}
+        if atencion:
+            atencion.delete()
+            mensaje="Atención eliminada"
+            context={'atenciones':atenciones,'mensaje':mensaje,'errores':errores}
+            return render(request,'taller/atencion_list.html',context)
+    except:
+        print("Error la id no existe")
+        atenciones=Atencion.objects.all()
+        mensaje="Error, id no existe"
+        context={'mensaje':mensaje,'atenciones':atenciones}
+        return render(request, 'taller/atencion_list.html',context)
+
+def atencionEdit(request,pk):
+    try:
+        atencion=Atencion.objects.get(id_atencion=pk)
+        context={}
+        if atencion:
+            print("Edit encontró la atencion")
+            if request.method == "POST":
+                print("Edit, es un post")
+                form=AtencionForm(request.POST,instance=atencion)
+                form.save()
+                mensaje="Datos actualizados"
+                print(mensaje)
+                context={'atencion':atencion,'form':form,'mensaje':mensaje}
+                return render(request,'taller/atencion_edit.html',context)
+            else:
+                print("Edit, no es un post")
+                form=AtencionForm(instance=atencion)
+                mensaje=""
+                context={'atencion':atencion,'form':form,'mensaje':mensaje}
+                return render(request,'taller/atencion_edit.html',context)
+    except:
+        print("Error, id no existe")
+        atenciones=Atencion.objects.all()
+        mensaje="Error, id no existe"
+        context={'mensaje':mensaje,'atenciones':atenciones}
+        return render(request,'taller/atencion_list.html',context)
