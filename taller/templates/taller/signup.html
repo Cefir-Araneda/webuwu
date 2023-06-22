@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{% static 'ext/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/keyframes.css' %}">
     <link rel="stylesheet" href="{% static 'css/banner.css' %}">
-    <link rel="stylesheet" href="{% static 'css/sign-up.css' %}">
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
     <title>Sign-Up - Taller Mecanico Rayo Makween</title>
 </head>
 <body>
@@ -20,6 +20,11 @@
                 <form method="POST">
                     {% csrf_token %}
                     <h2> Registrate </h2>
+                    <div class="inputbox">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <input type="text" required id="name" name="name">
+                        <label for="name"> Nombre </label>
+                    </div>
                     <div class="inputbox">
                         <ion-icon name="person-circle-outline"></ion-icon>
                         <input type="text" required id="newuser" name="newuser">
@@ -39,9 +44,6 @@
                         <ion-icon name="lock-closed-outline"></ion-icon>
                         <input type="password" required minlength="8" id="password2" name="password2">
                         <label for="password2"> Contraseña </label>
-                    </div>
-                    <div>
-                        <p class="error" id="error" name="error"></p>
                     </div>
                     <div class="forget">
                         <a href="#"> ¿Olvidaste tu contraseña?</a>
