@@ -25,4 +25,9 @@ urlpatterns = [
     path('atenciones_del/<str:pk>', views.atenciones_del, name='atenciones_del'),
     path('atenciones_editFind/<str:pk>', views.atenciones_editFind, name='atenciones_editFind'),
     path('atencionesUpdate', views.atencionesUpdate, name='atencionesUpdate'),
+    
+    path('crud_atencion', views.crud_atencion, name='crud_atencion'),
+    path('atencionAdd', views.atencionAdd, name='atencionAdd'),
+    path('atencionDel/<str:pk>', views.atencionDel, name='atencionDel'),
+    path('atencionEdit/<str:pk>', views.atencionEdit, name='atencionEdit'),
 ]
