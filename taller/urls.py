@@ -17,8 +17,6 @@ urlpatterns = [
     path('trabajo3', views.trabajo3, name = 'trabajo3'),
     
     path('perfil', views.perfil, name = 'perfil'),
-    path('mantenciones', views.mantenciones, name = 'mantenciones'),
-    path('notificaciones', views.notificaciones, name = 'notificaciones'),
     
     path('crud', views.crud, name='crud'),
     path('atencionesAdd', views.atencionesAdd, name='atencionesAdd'),

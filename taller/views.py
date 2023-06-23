@@ -69,14 +69,6 @@ def trabajo3(request):
     context={}
     return render(request, 'taller/trabajo3.html', context)
 
-def mantenciones(request):
-    context={}
-    return render(request, 'taller/mantenciones.html', context)
-
-def notificaciones(request):
-    context={}
-    return render(request, 'taller/notificaciones.html', context)
-
 # CRUD Agregar Atencion
 
 def index(request):
