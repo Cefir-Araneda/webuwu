@@ -101,6 +101,7 @@
                                 <th>Modelo</th>
                                 <th>Patente</th>
                                 <th>Diagnostico</th>
+                                <th>Mantencion</th>
                                 <th>Eliminar</th>
                                 <th>Modificar</th>
                                 {% for x in atenciones %}
@@ -110,6 +111,7 @@
                                         <td>{{ x.modelo }}</td>
                                         <td>{{ x.patente }}</td>
                                         <td>{{ x.diagnostico }}</td>
+                                        <td>{{ x.id_mantencion.mantencion }}</td>
                                         <td><button type="button">
                                             <a href="{% url 'atencionDel' pk=x.id_atencion %}">Eliminar</a>
                                         </button></td>
