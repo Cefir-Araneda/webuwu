@@ -1,0 +1,21 @@
+Usuarios Registrados
+
+admin
+admin1234
+
+ch.abellan
+mecha1234
+
+mo.quiros
+mecha1234
+
+si.montes
+mecha1234
+
+usuario
+user1234
+
+Cualquier usuario nuevo registrado
+no sera capaz de agregar atenciones 
+desde la barra que indica el logeo.
+(Exclusivo de los administradores)
