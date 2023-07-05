@@ -69,7 +69,9 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="perfil"><b class="color_nav">Perfil</b></a>
-              <a class="dropdown-item" href="crud_atencion"><b class="color_nav">Agregar mantencion</b></a>
+              {% if user.is_superuser %}
+                <a class="dropdown-item" href="crud_atencion"><b class="color_nav">Agregar mantencion</b></a>
+              {% endif %}
               <a class="dropdown-item" href="{% url 'home' %}"><b class="color_nav">Cerrar Sesion</b></a>
             </div>
           </li>
