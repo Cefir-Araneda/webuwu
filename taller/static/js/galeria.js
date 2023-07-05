@@ -17,9 +17,11 @@ function obtenerImagenesDeAutos() {
         const galleryContainer = document.getElementById('gallery');
   
         photos.forEach(photo => {
-          const imgElement = document.createElement('img');
+          var imgElement = document.createElement('img');
           imgElement.src = photo.src.original;
           imgElement.alt = 'Car';
+          imgElement.style.height = '400px';
+          imgElement.style.width = '400px';
           galleryContainer.appendChild(imgElement);
         });
       })
