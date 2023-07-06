@@ -53,7 +53,7 @@
           </li>
           <li>
           <li class="nav-item">
-            <a class="nav-link" href="contactanos"><b class="color_nav">Contactanos</b></a>
+            <a class="nav-link" href="{% url 'contactoAdd' %}"><b class="color_nav">Contactanos</b></a>
           </li>
           <li> 
               <input class="form-control" type="search" placeholder="Buscar">
@@ -92,11 +92,6 @@
                 <div class="col-md-4">
                     <h2><b> Escribenos </b></h2>
                     <form>
-                        <p>Tu nombre</p>
-                        <input type="text" name="name"></br>
-                        <p>Tu correo electronico</p>
-                        <input type="email" name="email"></br> 
-                        <p>¿De donde nos escribes?</p>
                         <label for="country-select">País:</label>
                         <select id="country-select"></select>
                         <script>
@@ -116,10 +111,16 @@
                               console.log('Error:', error);
                             });
                         </script>
-                        <p>Tu asunto</p>
-                        <input type="text" name="subject"></br>
-                        <p>Tu mensaje</p>
-                        <textarea> </textarea></br>
+                        <form action="" method="POST">
+                          {% csrf_token %}
+                          {{ form.as_p }}
+                          <input type="submit" value="Agregar">
+                        </form><br>
+                        <div id="idMensajes">
+                            {% if mensaje %}
+                            {{mensaje}}
+                            {% endif %}
+                        </div><br>
                         <input type="submit" value="Enviar">
                     </form>                       
                 </div> 
