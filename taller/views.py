@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Mecanico, Mantencion, Atencion
 from django.contrib.auth.models import User
-from .forms import AtencionForm
+from .forms import AtencionForm, ContactoForm
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
@@ -252,3 +252,21 @@ def atencionEdit(request,pk):
         mensaje="Error, id no existe"
         context={'mensaje':mensaje,'atenciones':atenciones}
         return render(request,'taller/atencion_list.html',context)
+
+def contactoAdd(request):
+    print("Estoy en controlador contactoAdd")
+    context={}
+
+    if request.method == "POST":
+        print("contrtolador es post")
+        form= ContactoForm(request.POST)
+        if form.is_valid:
+            print("Estoy agregando, es valido")
+            form.save()
+            form=ContactoForm()
+            context={'mensaje':'Ok, datos guardados...','form':form}
+            return render(request,'taller/contactanos.html',context)
+    else:
+        form=ContactoForm()
+        context={'form':form}
+        return render(request,'taller/contactanos.html',context)

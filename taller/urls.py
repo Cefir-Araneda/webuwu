@@ -28,4 +28,5 @@ urlpatterns = [
     path('atencionAdd', views.atencionAdd, name='atencionAdd'),
     path('atencionDel/<str:pk>', views.atencionDel, name='atencionDel'),
     path('atencionEdit/<str:pk>', views.atencionEdit, name='atencionEdit'),
+    path('contactoAdd', views.contactoAdd, name='contactoAdd'),
 ]

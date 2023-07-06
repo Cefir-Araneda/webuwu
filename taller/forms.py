@@ -9,3 +9,9 @@ class AtencionForm(ModelForm):
         labels =  {'mecanico':'Mecanico','fecha_atencion':'Fecha (año-mes-dia)','modelo':'Modelo',
                   'patente':'Patente','diagnostico':'Diagnostico','id_mantencion':'Tipo de mantencion',
                   'cantidad':'Cantidad','valor':'Valor total'}
+
+class ContactoForm(forms.Form):
+    nombre = forms.CharField(label="Tu nombre")
+    email = forms.EmailField(label="Tu correo electronico")
+    asunto = forms.CharField(label="Tu asunto")
+    mensaje = forms.CharField(widget=forms.Textarea, label="Tu mensaje")
